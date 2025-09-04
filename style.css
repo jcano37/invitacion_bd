@@ -1,7 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;500&display=swap');
 
 body { font-family: 'Quicksand', sans-serif; margin: 0; color: #333; background-color: #ffffff; text-align: center; }
-h1, h2 { font-family: 'Playfair Display', serif; }
+h1 { font-family: 'Playfair Display', serif; }
+h2 { 
+    font-family: 'Great Vibes', cursive; 
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: inherit;
+}
 
 /* --- GUEST FINDER STYLES (NEW TUXEDO IMAGE) --- */
 #guest-finder {
@@ -74,7 +81,7 @@ section { padding: 80px 20px; }
 .reception { background-image: url('https://images.pexels.com/photos/1128783/pexels-photo-1128783.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); }
 
 .event-icon { font-size: 3rem; margin-bottom: 20px; }
-.map-button { display: inline-block; margin-top: 20px; padding: 10px 30px; border: 2px solid white; color: white; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+.map-button { display: inline-block; margin-top: 20px; padding: 10px 30px; border-radius: 5px; border: 2px solid white; color: white; text-decoration: none; font-weight: 500; transition: all 0.3s; }
 .map-button:hover { background: white; color: #333; }
 
 .sponsors-section { background: #f8f8f8; }
