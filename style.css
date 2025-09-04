@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.google.com/specimen/Allura?utm_source=chatgpt.com');
 @import url('https://fonts.google.com/specimen/Montserrat?utm_source=chatgpt.com');
+@import url('https://fonts.google.com/specimen/Playfair+Display?utm_source=chatgpt.com');
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Quicksand:wght@400;500&display=swap');
 
 body { font-family: 'Quicksand', sans-serif; margin: 0; color: #333; background-color: #ffffff; text-align: center; }
 h1 { font-family: 'Playfair Display', serif; }
 h2 { 
-    font-family: 'Great Vibes', cursive; 
+    font-family: 'Great Vibes'; 
     font-size: 2.5rem;
     margin-bottom: 15px;
     color: inherit;
@@ -24,14 +26,20 @@ h2 {
     position: relative; z-index: 1; text-align: center; max-width: 550px; width: 100%;
     background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); padding: 40px; border-radius: 10px;
 }
-.finder-content h1 { font-size: 3rem; margin-bottom: 10px; }
+.finder-content h1 { 
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem; 
+    margin-bottom: 15px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+}
 .logo-image {
-    max-width: 120px;
+    max-width: 180px;
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    padding: 15px;
 }
 .finder-image {
     max-width: 200px;
@@ -52,15 +60,90 @@ h2 {
 #error-message { margin-top: 15px; color: #ffdddd; font-weight: 500; min-height: 20px; }
 
 
-/* --- ORIGINAL INVITATION DESIGN STYLES (NEW TUXEDO IMAGE) --- */
+/* --- ORIGINAL INVITATION DESIGN STYLES --- */
 .hero-section {
-    height: 100vh; color: white; display: flex; justify-content: center; align-items: center; text-align: center;
-    /* THIS IS THE NEW IMAGE URL, INSPIRED BY YOUR EXAMPLE */
-    background: url('https://images.pexels.com/photos/169190/pexels-photo-169190.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center/cover;
-    background-attachment: fixed; /* Parallax Effect */ position: relative;
+    position: relative;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  /* Añadido espacio en la parte superior */
+    min-height: calc(100vh - 60px); /* Ajusta la altura para compensar el padding */
+    box-sizing: border-box;
 }
-.hero-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.4); }
-.hero-content { position: relative; z-index: 1; }
+.hero_fondo_flores {
+    position: absolute;
+    top: -60px; /* Ajuste para compensar el padding superior */
+    left: 0;
+    width: 50%;
+    height: calc(100% + 60px); /* Extiende la altura para cubrir el espacio adicional */
+    background: url('fondo_flores.jpg') no-repeat center center/cover;
+    z-index: 1;
+}
+.hero_fondo_flores_derecha {
+    position: absolute;
+    top: -60px; /* Ajuste para compensar el padding superior */
+    right: 0;
+    width: 50%;
+    height: calc(100% + 60px); /* Extiende la altura para cubrir el espacio adicional */
+    background: url('fondo_flores.jpg') no-repeat center center/cover;
+    transform: scaleX(-1); /* Voltea la imagen horizontalmente */
+    z-index: 1;
+    opacity: 0.9;
+}
+
+/* Main Hero Section */
+.main-hero {
+    height: 100vh;
+    min-height: 600px;
+    background: url('nosotros.jpeg') no-repeat center center;
+    background-size: cover;
+    background-color: #000;
+    background-attachment: scroll; /* Cambiado de fixed a scroll */
+    background-position: center top;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 50px;
+   
+}
+
+.main-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+.hero-content { 
+    position: relative;
+    z-index: 3; /* Aseguramos que esté por encima de los fondos */
+    background: rgba(255, 255, 255, 0.3); /* Fondo transparente */
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    max-width: 90%;
+    width: 450px;
+    height: 550px;
+    margin: 0 auto;
+   
+    transition: all 0.3s ease;
+    color: #333; /* Color de texto más oscuro para mejor legibilidad */
+}
+
+.hero-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
 .hero-image {
     max-width: 300px;
     width: 100%;
@@ -70,17 +153,80 @@ h2 {
     border: 4px solid rgba(255, 255, 255, 0.4);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
-.hero-content h1 { font-size: 5rem; margin: 0; }
+.hero-content h1 {
+    font-family: 'Great Vibes';
+    font-size: 5.2rem;
+    margin: 0 0 1rem 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.2;
+}
+
+.hero-content h1 .name {
+    display: block;
+    line-height: 1;
+}
+
+.hero-content h1 .ampersand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin: 0.5rem 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    line-height: 1;
+}
 .hero-content p { font-size: 1.5rem; }
 .hero-content .date { font-size: 1.8rem; font-weight: 500; margin-top: 20px; border: 2px solid white; display: inline-block; padding: 10px 20px; }
 
 section { padding: 80px 20px; }
+
 .guest-welcome { background: #f8f8f8; }
 #guest-name { color: #c5a47e; font-size: 2.5rem; }
 
 #countdown { display: flex; justify-content: center; gap: 20px; font-size: 2rem; color: #c5a47e; font-weight: 500; }
 #countdown > div { display: flex; flex-direction: column; }
 #countdown > div span { font-size: 1rem; color: #333; }
+
+.countdown-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: inherit;
+    min-height: 10vh;  
+   
+}
+
+.countdown-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-top: 10px;
+    color: #666;
+    letter-spacing: 1px;
+   
+}
+
+.sponsors-section2 {
+    display: flex;
+    justify-content: center;   /* Centra horizontal */
+    align-items: center;       /* Centra vertical */
+    min-height: 10vh;         /* Ocupa toda la altura de la pantalla */
+    text-align: center;        /* Centra el texto dentro del párrafo */
+    padding: 20px;             /* Espaciado interno */
+    background-color: #fdfdfd; /* Fondo claro (ajústalo si quieres) */
+  }
+
+.sponsors-section2 p {
+    font-family: "Playfair Display", serif; /* Elegante */
+    font-size: 1.5rem;
+    color: #444;
+    max-width: 800px; /* Limita el ancho del texto */
+    line-height: 1.6;
+   
+  }
 
 .event-section { color: white; background-size: cover; background-position: center; background-attachment: fixed; position: relative; padding: 100px 20px; }
 .event-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0, 0, 0, 0.5); }
@@ -109,10 +255,18 @@ section { padding: 80px 20px; }
 
 footer { padding: 20px; background-color: #333; color: white; font-family: 'Playfair Display', serif; }
 @media (max-width: 768px) { 
-    .hero-content h1 { font-size: 3.5rem; } 
+    .hero-content h1 { 
+        font-size: 4rem; 
+        letter-spacing: 2px;
+    } 
     #countdown { font-size: 1.5rem; gap: 15px; } 
     .logo-image {
-        max-width: 80px;
+        max-width: 120px;
+        padding: 10px;
+    }
+    .finder-content h1 {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
     }
 }
 
