@@ -25,6 +25,14 @@ h2 {
     background: rgba(0,0,0,0.3); backdrop-filter: blur(10px); padding: 40px; border-radius: 10px;
 }
 .finder-content h1 { font-size: 3rem; margin-bottom: 10px; }
+.logo-image {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 .finder-image {
     max-width: 200px;
     width: 100%;
@@ -100,7 +108,13 @@ section { padding: 80px 20px; }
 .rsvp-button:hover { transform: scale(1.05); }
 
 footer { padding: 20px; background-color: #333; color: white; font-family: 'Playfair Display', serif; }
-@media (max-width: 768px) { .hero-content h1 { font-size: 3.5rem; } #countdown { font-size: 1.5rem; gap: 15px; } }
+@media (max-width: 768px) { 
+    .hero-content h1 { font-size: 3.5rem; } 
+    #countdown { font-size: 1.5rem; gap: 15px; } 
+    .logo-image {
+        max-width: 80px;
+    }
+}
 
 /* --- Estilos para los Detalles Bancarios --- */
 .bank-details {
