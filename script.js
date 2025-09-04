@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Lógica del contador (sin cambios)
     const setupCountdown = () => {
-        const weddingDate = new Date("October 26, 2025 16:00:00").getTime();
+        const weddingDate = new Date("December 6, 2025 16:00:00").getTime();
         const countdownElement = document.getElementById('countdown');
 
         const interval = setInterval(() => {
